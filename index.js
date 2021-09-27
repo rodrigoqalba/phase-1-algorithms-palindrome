@@ -1,23 +1,28 @@
 function isPalindrome(word) {
   // Write your algorithm here
-  describe("isPalindrome", () => {
-    it("returns true for 'abba'", () => {
-      expect(isPalindrome("abba")).to.be.true;
-    });
-    it("returns true for 'racecar'", () => {
-      expect(isPalindrome("racecar")).to.be.true;
-    });
-    it("returns true for 'a'", () => {
-      expect(isPalindrome("a")).to.be.true;
-    });
-    it("returns false for 'robot'", () => {
-      expect(isPalindrome("robot")).to.be.false;
-    });
-    it("returns false for 'ab'", () => {
-      expect(isPalindrome("ab")).to.be.false;
-    });
-  });
+  
+
+function isPalindrome(word){
+  const arrayWord = word.split(``);
+  const reverseArrayWord = arrayWord.reverse();
+  const reverseWord = reverseArrayWord.join(``); 
+
+  if(word === reverseWord) {
+    console.log("true")
+    return "true";
+  }
+  else { 
+    console.log("false")
+    return "false";
+  }
 }
+
+}
+
+const word = isPalindrome("abba")
+console.log(word)
+
+
 
 /* 
   Add your pseudocode here
